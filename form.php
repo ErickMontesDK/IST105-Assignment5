@@ -25,10 +25,11 @@
             border: none;
             color: yellow;
             width: auto;
-            max-width: 50px;
+            min-width: 30px;
             -moz-appearance: textfield !important;
             appearance: textfield !important;
             -webkit-appearance: none;
+            field-sizing: content;
         }
         .input_container {
             color: yellow;
