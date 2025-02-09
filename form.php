@@ -57,20 +57,20 @@
 
     <!-- form inputs -->
     <form action="process.php" method="POST">
+        <!--Input for the number, with name "number"-->
         <div class="form-group">
             <label for="number">Number (e.g., birth year):</label>
             <div class="input_container">
                 <input type="number" id="number" name="number" required>
             </div>
         </div>
+        <!--Input for the text, with name "text"-->
         <div class="form-group">
             <label for="text">Text (e.g., name or secret word):</label>
             <div class="input_container">
                 <input type="text" id="text" name="text" required>
             </div>
         </div>
-        
-
         
 
         <input type="submit" value="[Solve the Puzzle]">
