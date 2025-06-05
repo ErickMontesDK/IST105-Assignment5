@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Interactive Treasure Hunt</title>
+    <style>
+        body { background-color:black; color:white;} 
+        .asw_container {display:flex; flex-direction:column; margin-bottom:10px;} 
+        .answer::before {content:'-'}
+    </style>
+</head>
+<body>
+    <div class="asw_container">
+        <b class="title">Number Puzzle:</b>
+        <span class="answer">{{number_puzzle}}</span>
+    </div>
+    <div class="asw_container">
+        <b class="title">Text Puzzle:</b>
+        <span class="answer">Binary: {{binary_text}}</span>
+        <span class="answer">Vowel Count: {{vowel_count}}</span>
+    </div>
+    <div class="asw_container">
+        <b class="title">Treasure Hunt:</b>
+        {% for attempt, info in attempts_results.items %}
+            <span class="answer">{{ info.attempt_info }}</span>
+            {% if info.treasure_info %}
+                <span class="answer">{{ info.treasure_info }}</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html> 
